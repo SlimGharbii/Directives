@@ -1,0 +1,27 @@
+<p
+*ngIf="isShown"
+>showparagraph works!</p>
+<button (click)="showhide()">Click moi</button>
+
+
+
+
+
+
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-showparagraph',
+  templateUrl: './showparagraph.component.html',
+  styleUrls: ['./showparagraph.component.css']
+})
+export class ShowparagraphComponent implements OnInit {
+isShown = true;
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+showhide() {
+  this.isShown= !this.isShown
+}
+}
